@@ -15,4 +15,8 @@ router.get('/progress', function(req, res, next) {
   res.send('OK')
 });
 
+router.get('/ping', function(req, res, next) {
+  res.send('OK')
+});
+
 module.exports = router;
