@@ -54,7 +54,7 @@ const tweetProgress = () => {
 const reply = (t) => {
   tweet({
     in_reply_to_status_id: t.id_str,
-    status: `${random(prefix)} @${t.user.screen_name}! ${random(body)} ${random(left)(true)} ${random(suffix)}}`
+    status: `${random(prefix)} @${t.user.screen_name}! ${random(body)} ${random(left)(true)} ${random(suffix)}`
   })
 }
 
