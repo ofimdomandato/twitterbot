@@ -25,7 +25,7 @@ const body = [
 ]
 
 const left = [
-  daysLeft, hoursLeft, minutesLeft
+  daysLeft, hoursLeft, minutesLeft, progress
 ]
 
 const suffix = [
@@ -34,7 +34,7 @@ const suffix = [
 
 const tweet = (t) => {
   if (process.env.TWEETING !== 'YES') return
-  
+
   T.post('statuses/update', t, (err, data, response) => {
     if (err) {
       console.error(err);
@@ -47,7 +47,7 @@ const tweetProgress = () => {
   const filled = Math.floor(p/10)
   const bar = `${'▓'.repeat(filled*2)}${'░'.repeat((10-filled)*2)}`;
   tweet({
-    status: `Fatam ${daysLeft(true)} para o mandato acabar.\n${bar} ${progres(true)}%`
+    status: `Faltam ${daysLeft(true)} para o mandato acabar.\n${bar} ${progress(true)}`
   })
 }
 
