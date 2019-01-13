@@ -25,7 +25,7 @@ const body = [
 ]
 
 const left = [
-  daysLeft, hoursLeft, minutesLeft, progress
+  daysLeft, hoursLeft, minutesLeft
 ]
 
 const suffix = [
